@@ -1,0 +1,51 @@
+<table class="table table-striped">
+    <thead>
+        <tr class="text-center">
+            <th>{{ cols[0].text }}</th>
+            <th>{{ cols[1].text }}</th>
+            <th>{{ cols[2].text }}</th>
+            <th>{{ cols[3].text }}</th>
+            <th>{{ cols[4].text }}</th>
+            <th>{{ cols[5].text }}</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- a * jelenti, hogy meg fogja változtathi a html struktúrát -->
+        <!-- ahány eleme van a list-nek, annyiszor fog megjelenni  -->
+        <tr *ngFor="let row of list">
+            <!-- <td class="py-3 text-center">
+                {{ list[0].id }}</td>
+            <td>
+                <app-data-cell [cellValue]="list[0].name"></app-data-cell> </td>
+            <td>
+                <app-data-cell [cellValue]="list[0].email"></app-data-cell> </td>
+            <td>
+                <app-data-cell [cellValue]="list[0].phone"></app-data-cell> </td>
+            <td>
+                <app-data-cell [cellValue]="list[0].city"></app-data-cell> </td>
+            <td>
+                <app-data-cell [cellValue]="list[0].address"></app-data-cell> </td>
+                <td> -->
+                    <td clas="text-center py-4" *ngFor="let col of cols">
+                        <app-data-cell 
+                            [cellValue]="row[col.key]"
+                            [col]="col"
+                        ></app-data-cell>
+                    </td>
+                    <td>
+                    <div class="btn-group">
+                        <button class="btn btn-info" (click)="onUpdate('update')">
+                            <i class="fa fa-pencil"></i>
+                        </button>
+                        <button class="btn btn-danger" (click)="onDelete('delete')">
+                            <!-- data-property binding - jelölése [], az adatot a component.ts-ből veszi -->
+                            <i [class]="deleteIconClass"></i>
+                        </button>
+                    </div>
+                </td>
+        </tr>
+         <!-- hozni data-row komponenst, mivel tablenél mindig jobb minél kisebb egységre bontani, könnyeb hivatkozni, dolgozni vele-->
+        <!-- <app-data-row></app-data-row> -->
+    </tbody>
+</table>

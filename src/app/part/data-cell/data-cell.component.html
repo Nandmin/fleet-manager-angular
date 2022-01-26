@@ -1,0 +1,22 @@
+<!-- Kétirányú adatkötés (event & property binding)  -->
+<!-- [(ngModel)]= ez a Banan in the box :) -->
+
+<!-- Lépéesek:
+1. ide felvenni ngModel 
+2. app.module.ts-be importálni a FormModule-t (2 helyen felvenni) Csak akkor működik, ha ezt beimportáljuk
+3. data-cell.component.ts-be a cellValue változót felvenni, értékkel. Ami itt van, az lesz a cellában, értelemszerűen -->
+<span class="text-center"
+    *ngIf="col.type == 'plain'">
+        {{ cellValue }}
+</span>
+
+<!-- a [type] = 'col.type'-al szabályozni lehet, hogy csak a típusnak megfelő adat jelenhet/kerülhet a mezőbe -->
+<input
+    *ngIf="col.type != 'plain'"
+        [type]="col.type"
+        [(ngModel)]="cellValue"
+        class="form-control">
+
+<!-- Adatok visszaellenőrzése (debug, egyszerűen, persze ez élesben nem lehet már bent) 
+    Így látszik ha átírom az adatot, a komponensben is módosulni fog -->
+<!-- {{ cellValue }} -->
