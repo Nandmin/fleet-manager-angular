@@ -11,7 +11,7 @@ export class BaseService {
         name: 'James',
         email: 'james@cargo.com',
         phone: '36309638521',
-        city: 'Neverland',
+        city: 'la',
         address: 'Middle of nowhere',
       },
       {
@@ -19,7 +19,7 @@ export class BaseService {
         name: 'Jack',
         email: 'jack@cargo.com',
         phone: '363093238521',
-        city: 'Neverland',
+        city: 'bp',
         address: 'Middle of Nowhere',
       },
       {
@@ -27,7 +27,7 @@ export class BaseService {
         name: 'Jones',
         email: 'jones@cargo.com',
         phone: '36309456521',
-        city: 'Neverland',
+        city: 'debi',
         address: 'Middle of Nowhere',
       }
     ],
