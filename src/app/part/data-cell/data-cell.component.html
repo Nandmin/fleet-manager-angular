@@ -22,6 +22,7 @@ a [type] = 'col.type'-al szabályozni lehet, hogy csak a típusnak megfelő adat
 <!-- {{ cellValue }} -->
 
 <!-- Ugyanez, csak switch-el  -->
+<!-- "'select'": string-ként akarunk hivatkozni, '' hiányában azt hinné, hogy az változó -->
     <span [ngSwitch]="col.type">
         <span class="text-center"
         *ngSwitchCase ="'plain'">
@@ -34,8 +35,8 @@ a [type] = 'col.type'-al szabályozni lehet, hogy csak a típusnak megfelő adat
             *ngSwitchCase="'select'">
             <option 
                 *ngFor="let option of col.options"
-                [value]="option.value">
-                {{ option.text }}
+                    [value]="option.value">
+                    {{ option.text }}
             </option>
         </select>
         <input

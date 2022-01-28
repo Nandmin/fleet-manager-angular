@@ -1,3 +1,28 @@
+<div class="row">
+    <div class="col-3">
+        <select 
+            [(ngModel)]="phraseKey"
+            class="form-control">
+            <option value="not set">Find all</option>
+            <option 
+                *ngFor="let col of cols"
+                [value]="col.key">{{col.text}}
+            </option>
+        </select>
+    </div>
+        <div class ="col-9">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                      <i class="fa fa-filter" aria-hidden="true"></i>
+                    </span>
+                </div>
+                    <input type="text" class="form-control" placeholder="filter"
+                    [(ngModel)]="phraseString">
+            </div>
+    </div>
+</div>
+
 <table class="table table-striped">
     <thead>
         <tr class="text-center">
@@ -13,7 +38,9 @@
     <tbody>
         <!-- a * jelenti, hogy meg fogja változtathi a html struktúrát -->
         <!-- ahány eleme van a list-nek, annyiszor fog megjelenni  -->
-        <tr *ngFor="let row of list">
+        <!-- | : pipe (szűrés) jele -->
+        <!-- paraméterek elválasztása : -al. Ebben a sorrendben kapja meg a transform fv az adatokat -->
+        <tr *ngFor="let row of list | objectArray:phraseString:phraseKey">
             <!-- <td class="py-3 text-center">
                 {{ list[0].id }}</td>
             <td>

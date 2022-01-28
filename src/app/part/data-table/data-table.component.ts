@@ -10,6 +10,7 @@ export class DataTableComponent implements OnInit {
 // ezeket az adatokat kell átadni a html-nek
   @Input() list: any[] = [];
   @Input() cols: any[] = [];
+  // @Input() 
 
 
   // Egyirányú adatkötés (data-binding).
@@ -17,7 +18,8 @@ export class DataTableComponent implements OnInit {
 // Ezeket az adatokat a html-be kell megjeleníteni
 // Text módosítása esetén a táblázatban is módosul a szöveg
     deleteIconClass = "fa fa-trash";
-    
+    phraseString: string ="";
+    phraseKey: string = "not set";
 
     driver: any = {};
     // driver: any = {
