@@ -26,12 +26,12 @@ a [type] = 'col.type'-al szabályozni lehet, hogy csak a típusnak megfelő adat
     <span [ngSwitch]="col.type">
         <span class="text-center"
         *ngSwitchCase ="'plain'">
-            {{ cellValue }}
+            {{ row[col.key] }}
         </span>
         
         <select 
             class="form-control"
-            [(ngModel)]="cellValue"
+            [(ngModel)]="row[col.key]"
             *ngSwitchCase="'select'">
             <option 
                 *ngFor="let option of col.options"
@@ -42,6 +42,6 @@ a [type] = 'col.type'-al szabályozni lehet, hogy csak a típusnak megfelő adat
         <input
             *ngSwitchDefault
                 [type]="col.type"
-                [(ngModel)]="cellValue"
+                [(ngModel)]="row[col.key]"
                 class="form-control">
     </span>

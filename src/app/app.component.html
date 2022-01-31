@@ -3,5 +3,6 @@
   <app-data-table 
     [list]="driver"
     [cols]="cols"
+    (create)="onCreate($event)"
   ></app-data-table>
 </div>

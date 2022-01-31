@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // ebbem van az ngModel
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './part/menu/menu.component';
@@ -20,7 +21,8 @@ import { ObjectArrayPipe } from './pipe/object-array.pipe';
   ],
   imports: [
     BrowserModule,
-    FormsModule //amit importálunk ide is fel kell venni
+    FormsModule, //amit importálunk ide is fel kell venni
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

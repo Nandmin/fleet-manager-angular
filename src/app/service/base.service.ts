@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BaseService {
+  serverUrl: string = "http://localhost:3000/"
+
   data: any = {
     drivers: [
       {
@@ -52,9 +56,29 @@ export class BaseService {
     ]
   };
 
-  constructor() {}
+  constructor(
+    private http: HttpClient
+  ) {}
 
-  getAll(dataType: string): any[] {
-    return this.data[dataType];
+  // beégetett adatból
+  // getAll(dataType: string): any[] {
+  //   return this.data[dataType];
+  // }
+
+  // Observable: reaktív programozást tesz lehetővé, ha vmi változik, értesíti a szereplőket
+  // Az értesítésre fel kell iratkozni
+  getAll(dataType: string): Observable<any> {
+    let url = `${this.serverUrl}${dataType}`;
+    return this.http.get(url)
+  }
+
+  // POST létrehozása
+  create(dataType: string, row: any): void {
+    let url = `${this.serverUrl}${dataType}`;
+    // hova és mit küldünk
+    this.http.post(url, row)
+    //a szerver üzeneteket kiírja. Ez az observable-ból jön, egyszer fut le
+    .forEach(response => console.log(response));
+
   }
 }

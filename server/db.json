@@ -1,0 +1,63 @@
+{
+  "drivers": [
+    {
+      "id": 1,
+      "name": "James",
+      "email": "james@cargo.com",
+      "phone": "36309638521",
+      "city": "la",
+      "address": "Middle of nowhere"
+    },
+    {
+      "id": 2,
+      "name": "Jack",
+      "email": "jack@cargo.com",
+      "phone": "363093238521",
+      "city": "bp",
+      "address": "Middle of Nowhere"
+    },
+    {
+      "id": 3,
+      "name": "Jones",
+      "email": "jones@cargo.com",
+      "phone": "36309456521",
+      "city": "debi",
+      "address": "Middle of Nowhere"
+    },
+    {
+      "name": "asdf",
+      "email": "asdf",
+      "phone": "3423",
+      "city": "la",
+      "address": "fva",
+      "id": 4
+    },
+    {
+      "name": "Teszt Elek",
+      "email": "test.elek@gmail.com",
+      "phone": "3242342134124",
+      "city": "bp",
+      "address": "aséldfj 45",
+      "id": 5
+    }
+  ],
+  "vehicles": [
+    {
+      "id": 1,
+      "lp": "GHG-234",
+      "year": 2015,
+      "manufacturer": "VW",
+      "consumption": 7,
+      "engine": "diesel"
+    }
+  ],
+  "fuelings": [
+    {
+      "id": 1,
+      "vehicle": 1,
+      "driver": 1,
+      "ammount": 40,
+      "date": "2022-01-01"
+    }
+  ]
+}

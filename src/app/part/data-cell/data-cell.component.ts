@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DataCellComponent implements OnInit {
   // a data-cell így már tudja, hogy van bejövő adat, amit a cellValue-n keresztül kap meg
   // a () arra szolgál, ha más névvel jön a bejövő adat, át lehet írni
-  @Input() cellValue: any;
+  @Input() row: any;
   @Input() col: any;
 
   constructor() { }

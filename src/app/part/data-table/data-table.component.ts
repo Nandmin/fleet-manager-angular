@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+// import { EventEmitter } from 'stream';
 import { BaseService } from '../../service/base.service';
 
 @Component({
@@ -10,7 +11,8 @@ export class DataTableComponent implements OnInit {
 // ezeket az adatokat kell átadni a html-nek
   @Input() list: any[] = [];
   @Input() cols: any[] = [];
-  // @Input() 
+  
+  @Output() create: EventEmitter<any> = new EventEmitter();
 
 
   // Egyirányú adatkötés (data-binding).
@@ -20,6 +22,7 @@ export class DataTableComponent implements OnInit {
     deleteIconClass = "fa fa-trash";
     phraseString: string ="";
     phraseKey: string = "not set";
+    newRow: any = {};
 
     driver: any = {};
     // driver: any = {
@@ -55,6 +58,11 @@ export class DataTableComponent implements OnInit {
   ngOnInit() {
     // átrakva app-component
     //this.driver = this.baseService.getAll('drivers')[0];
+  }
+
+  // A create eseményen keresztül továbbadja az adatot az app-component-nek (@Output...)
+  onCreate($event: any): void {
+    this.create.emit($event);
   }
   
   // Adatküldés a nézetből (html oldalról)

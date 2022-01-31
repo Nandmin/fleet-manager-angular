@@ -7,7 +7,7 @@ export class ConfigService {
   cols = {
     drivers: [
       { key: 'id', text: '#', type: "plain" },
-      { key: 'name', text: 'Name', type: "text" },
+      { key: 'name', text: 'Drivers Name', type: "text" },
       { key: 'email', text: 'Email', type: "text" },
       { key: 'phone', text: 'Phone', type: "number" },
       { key: 'city', text: 'City', type: "select", 

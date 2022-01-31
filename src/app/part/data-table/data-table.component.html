@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row top-row">
     <div class="col-3">
         <select 
             [(ngModel)]="phraseKey"
@@ -36,6 +36,18 @@
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td *ngFor="let col of cols">
+                <app-data-cell [row]="newRow" [col]="col"></app-data-cell>
+            </td>
+            <td>
+                <div class="btn-group text-center">
+                    <button class="btn btn-success" (click)="onCreate(newRow)">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
         <!-- a * jelenti, hogy meg fogja változtathi a html struktúrát -->
         <!-- ahány eleme van a list-nek, annyiszor fog megjelenni  -->
         <!-- | : pipe (szűrés) jele -->
@@ -56,7 +68,7 @@
                 <td> -->
                     <td clas="text-center py-4" *ngFor="let col of cols">
                         <app-data-cell 
-                            [cellValue]="row[col.key]"
+                            [row]="row"
                             [col]="col"
                         ></app-data-cell>
                     </td>
@@ -76,3 +88,5 @@
         <!-- <app-data-row></app-data-row> -->
     </tbody>
 </table>
+
+<!-- DEBUG: {{newRow | json }} -->
