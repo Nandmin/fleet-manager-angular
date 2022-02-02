@@ -8,12 +8,13 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## JSON server
 Install JSON server package: npm i -g json-server
-Start : json-server server\db.json --watch
-
-## Google Chart
-Install: npm i angular-google-charts
+Start: json-server server\db.json --watch
 
 Dataconnection will automatically refresh if you change any in the source JSON file (db.json).
+
+## Google Chart
+Install: npm i ng2-google-charts
+configuration: https://npm.io/package/ng2-google-charts
 
 ## Code scaffolding
 

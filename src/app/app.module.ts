@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { GoogleChartsModule } from 'angular-google-charts'
+import { Ng2GoogleChartsModule, GoogleChartsSettings } from 'ng2-google-charts';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './part/menu/menu.component';
@@ -45,7 +46,8 @@ const appRouting: Routes = [
     FormsModule, //amit importálunk ide is fel kell venni
     HttpClientModule,
     // beállítja, hogy az approutingban meghatározott szabályok működjenek
-    GoogleChartsModule.forRoot({ version: 'chart-version' }),
+    //GoogleChartsModule.forRoot({ version: 'chart-version' }),
+    Ng2GoogleChartsModule,
     RouterModule.forRoot(appRouting)
   ],
   providers: [],
