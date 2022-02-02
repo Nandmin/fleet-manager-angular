@@ -1,5 +1,4 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-// import { EventEmitter } from 'stream';
 import { BaseService } from '../../service/base.service';
 
 @Component({
@@ -13,6 +12,8 @@ export class DataTableComponent implements OnInit {
   @Input() cols: any[] = [];
   
   @Output() create: EventEmitter<any> = new EventEmitter();
+  @Output() update: EventEmitter<any> = new EventEmitter();
+  @Output() delete: EventEmitter<any> = new EventEmitter();
 
 
   // Egyirányú adatkötés (data-binding).
@@ -66,14 +67,18 @@ export class DataTableComponent implements OnInit {
   }
   
   // Adatküldés a nézetből (html oldalról)
-  onUpdate($event: any): void {
+  onUpdate(row: any): void {
     // alert('Update');
-    alert(`Clicked on ${$event} button`);
+    this.update.emit(row);
+    //alert(`Clicked on ${$event} button`);
   };
 
-  onDelete($event: any):void {
+  onDelete(row: any):void {
     // alert('Click on delete button');
-    alert(`Clicked on ${$event} button`);
+    // alert(`Clicked on ${$event} button`);
+    if(confirm("Are you sure?")){
+      this.delete.emit(row);
+    }
   }
 
 }

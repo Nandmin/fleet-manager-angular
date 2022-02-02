@@ -2,62 +2,84 @@
   "drivers": [
     {
       "id": 1,
-      "name": "James",
-      "email": "james@cargo.com",
-      "phone": "36309638521",
+      "name": "John Doe",
+      "email": "john.doe@gmail.com",
+      "phone": 12354698745,
       "city": "la",
-      "address": "Middle of nowhere"
+      "address": "My address"
     },
     {
       "id": 2,
-      "name": "Jack",
-      "email": "jack@cargo.com",
-      "phone": "363093238521",
+      "name": "Jack Idol",
+      "email": "idol@gmail.com",
+      "phone": 99999999999,
       "city": "bp",
-      "address": "Middle of Nowhere"
+      "address": "Rabbi str. 55."
     },
     {
       "id": 3,
-      "name": "Jones",
-      "email": "jones@cargo.com",
-      "phone": "36309456521",
-      "city": "debi",
-      "address": "Middle of Nowhere"
-    },
-    {
-      "name": "asdf",
-      "email": "asdf",
-      "phone": "3423",
+      "name": "Charlie Filpo",
+      "email": "cf@gmail.com",
+      "phone": 99999999999,
       "city": "la",
-      "address": "fva",
-      "id": 4
+      "address": "Ulica. 44."
     },
     {
-      "name": "Teszt Elek",
-      "email": "test.elek@gmail.com",
-      "phone": "3242342134124",
+      "name": "Ann",
+      "email": "ann@xn--jasdfj-dva.com",
+      "phone": "435345435435",
       "city": "bp",
-      "address": "aséldfj 45",
-      "id": 5
+      "address": "Kiss u. 10",
+      "id": 7
+    },
+    {
+      "name": "Poke Yoke",
+      "email": "poke.yoke@min.jp",
+      "phone": "324324324345",
+      "city": "debi",
+      "address": "ulicska 15",
+      "id": 8
     }
   ],
   "vehicles": [
     {
       "id": 1,
-      "lp": "GHG-234",
+      "lp": "GOD-258",
       "year": 2015,
       "manufacturer": "VW",
       "consumption": 7,
       "engine": "diesel"
+    },
+    {
+      "lp": "HHP-887",
+      "year": "2002",
+      "manufacturer": "Volvo",
+      "consumption": "12",
+      "engine": "benzin",
+      "id": 2
     }
   ],
   "fuelings": [
     {
       "id": 1,
-      "vehicle": 1,
-      "driver": 1,
-      "ammount": 40,
-      "date": "2022-01-01"
+      "vehicleId": "1",
+      "driverId": "2",
+      "amount": 40,
+      "date": "2019-04-01"
+    },
+    {
+      "vehicleId": "2",
+      "driverId": "7",
+      "amount": "100",
+      "date": "2019-03-04",
+      "id": 2
+    },
+    {
+      "vehicleId": "2",
+      "driverId": "1",
+      "amount": "55",
+      "date": "2019-03-13",
+      "id": 3
     }
   ]
 }

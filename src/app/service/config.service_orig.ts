@@ -1,0 +1,39 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class ConfigService {
+  cols = {
+    drivers: [
+      { key: 'id', text: '#', type: "plain" },
+      { key: 'name', text: 'Drivers Name', type: "text" },
+      { key: 'email', text: 'Email', type: "text" },
+      { key: 'phone', text: 'Phone', type: "number" },
+      { key: 'city', text: 'City', type: "select", 
+      options: [
+        {value: "la", text: "Los Alamos"},
+        {value: "bp", text: "Budapest"},
+        {value: "debi", text: "Debrecen"}
+      ]},
+      { key: 'address', text: 'Address', type: "text" },
+    ],
+    vehicles: [
+      { key: 'id', text: '#', type: "plain" },
+      { key: 'lp', text: 'GHG-234', type: "text" },
+      { key: 'year', text: '2015', type: "text" },
+      { key: 'manufacturer', text: 'VW', type: "text" },
+      { key: 'consumption', text: 7, type: "text" },
+      { key: 'engine', text: 'diesel', type: "text" },
+    ],
+    fuelings: [
+      { key: 'id', text: '#', type: "plain" },
+      { key: 'vehicle', text: '1', type: "text" },
+      { key: 'driver', text: '1', type: "text" },
+      { key: 'ammount', text: '40', type: "text" },
+      { key: 'date', text: '2022-01-01', type: "text" },
+    ],
+  };
+
+  constructor() {}
+}

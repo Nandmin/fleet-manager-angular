@@ -26,12 +26,15 @@
 <table class="table table-striped">
     <thead>
         <tr class="text-center">
-            <th>{{ cols[0].text }}</th>
+            <!-- <th>{{ cols[0].text }}</th>
             <th>{{ cols[1].text }}</th>
             <th>{{ cols[2].text }}</th>
             <th>{{ cols[3].text }}</th>
             <th>{{ cols[4].text }}</th>
-            <th>{{ cols[5].text }}</th>
+            <th>{{ cols[5].text }}</th> -->
+            <th *ngFor="let col of cols">
+                {{ col.text }}
+              </th>
             <th>Action</th>
         </tr>
     </thead>
@@ -74,10 +77,10 @@
                     </td>
                     <td>
                     <div class="btn-group">
-                        <button class="btn btn-info" (click)="onUpdate('update')">
+                        <button class="btn btn-info" (click)="onUpdate(row)">
                             <i class="fa fa-pencil"></i>
                         </button>
-                        <button class="btn btn-danger" (click)="onDelete('delete')">
+                        <button class="btn btn-danger" (click)="onDelete(row)">
                             <!-- data-property binding - jelölése [], az adatot a component.ts-ből veszi -->
                             <i [class]="deleteIconClass"></i>
                         </button>
