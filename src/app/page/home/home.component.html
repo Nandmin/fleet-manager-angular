@@ -10,11 +10,15 @@
     <div class="col-6">
         <div class="home-box">
             <h3>Fuelings by Drivers</h3>
+            <google-chart *ngIf="driversChart" [data]="driversChart">
+            </google-chart>
         </div>
     </div>
     <div class="col-12">
         <div class="home-box">
             <h3>Fuelings by Days</h3>
+            <google-chart *ngIf="daysChart" [data]="daysChart">
+            </google-chart>
         </div>
     </div>
 </div>
