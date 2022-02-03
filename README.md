@@ -44,6 +44,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
         Result goes to 'dist' folder
 4. Copy 'dist' folder to webserver f.e. c:\xampp\htdocs
         It's recommended to rename index.html to index.php
-5. Edit index.php and change entry to <base href="/FleetManager/">
+5. Edit index.php and change entry to 'base href="/FleetManager/"'
 
 
