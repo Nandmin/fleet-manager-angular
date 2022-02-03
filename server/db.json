@@ -39,6 +39,14 @@
       "city": "debi",
       "address": "ulicska 15",
       "id": 8
+    },
+    {
+      "name": "Teszt Elek",
+      "email": "teszt.elek@gmail.com",
+      "phone": "34234435435",
+      "city": "bp",
+      "address": "Kő u. 45.",
+      "id": 9
     }
   ],
   "vehicles": [

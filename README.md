@@ -35,3 +35,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Deploy
+1. Start JSON server: json-server . \server\db.json --watch
+2. Start Angular: ng serve -o
+3. Build: ng build --prod
+        Result goes to 'dist' folder
+4. Copy 'dist' folder to webserver f.e. c:\xampp\htdocs
+        It's recommended to rename index.html to index.php
+5. Edit index.php and change entry to <base href="/FleetManager/">
+
+

@@ -56,7 +56,8 @@ export class HomeComponent implements OnInit {
       [['Vehicle', 'Consumption']].concat(ByDriver), 'PieChart', this.pieChartOptions);
 
     this.daysChart = this.collectChartData(
-      [['Vehicle', 'Consumption']].concat(ByDays), 'ColumnChart', this.columnChartOptions);
+      [['Vehicle', 'Consumption']].concat(ByDays), 'ColumnChart', this.columnChartOptions
+    );
     
     // {
     //   chartType: 'PieChart',

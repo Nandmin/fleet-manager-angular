@@ -25,7 +25,6 @@ export class DataTableComponent implements OnInit {
     phraseKey: string = "not set";
     newRow: any = {};
 
-    driver: any = {};
     // driver: any = {
     //   id: 1,
     //   name: "James",

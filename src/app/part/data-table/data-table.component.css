@@ -5,3 +5,12 @@
 body{
     background-color: darkgrey;
 }
+
+table {
+    border: 2px;
+    border-color: lightgrey;
+    border-style: none !important;
+    box-shadow: 0 0 3px !important;
+    border-radius: 5px !important;
+    margin: 0px auto;
+}

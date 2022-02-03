@@ -45,6 +45,7 @@ export class Base implements OnInit, OnDestroy {
   
     onCreate(row: any): void {
       this.baseService.create(this.dataType, row);
+      
     }
   
     onUpdate(row: any): void {

@@ -62,7 +62,7 @@ export class ConfigService {
       { key: 'vehicleId', text: 'Vehicle', type: "text" },
       { key: 'driverId', text: 'Driver Name', type: "text" },
       { key: 'amount', text: 'Ammount', type: "text" },
-      { key: 'date', text: 'Date', type: "text" }
+      { key: 'date', text: 'Date', type: "date" }
     ]
   }; 
 
